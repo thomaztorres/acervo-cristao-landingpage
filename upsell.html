@@ -26,7 +26,7 @@ h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.15}
 /* botões gerados pela Kiwify herdam o tema */
 button[id^="kiwify-upsell-trigger"],a[id^="kiwify-upsell-trigger"]{display:block;width:100%;background:linear-gradient(180deg,#D98B6D,var(--terra2))!important;color:#fff!important;text-align:center;font-weight:800;font-size:19px!important;letter-spacing:.02em;padding:20px 26px!important;border-radius:14px!important;text-decoration:none;box-shadow:0 8px 22px rgba(168,91,66,.4);cursor:pointer;border:none;transition:.2s;font-family:'Montserrat',sans-serif}
 button[id^="kiwify-upsell-trigger"]:hover,a[id^="kiwify-upsell-trigger"]:hover{transform:translateY(-2px)}
-#kiwify-upsell-cancel-trigger,button#kiwify-upsell-cancel-trigger{display:block;width:100%;background:none!important;color:#8b8371!important;text-align:center;font-weight:600;font-size:14px;padding:16px 10px!important;border:none;text-decoration:underline;cursor:pointer;font-family:'Montserrat',sans-serif}
+#kiwify-upsell-cancel-trigger,div[id^="kiwify-upsell-cancel-trigger"],.decline-link{display:block;width:100%;background:none!important;color:#8b8371!important;text-align:center;font-weight:600;font-size:14px;padding:16px 10px!important;border:none;text-decoration:underline;cursor:pointer;font-family:'Montserrat',sans-serif}
 /* hero */
 .hero{background:radial-gradient(1200px 600px at 80% -10%,#33456B 0%,var(--navy) 55%,var(--navy2) 100%);color:#F3EDDE;padding:56px 0 60px;text-align:center}
 .kicker{display:inline-block;background:var(--gold);color:var(--navy2);font-size:12px;font-weight:800;letter-spacing:.2em;padding:7px 18px;border-radius:30px;text-transform:uppercase}
@@ -99,16 +99,13 @@ src="https://www.facebook.com/tr?id=1625181948755238&ev=PageView&noscript=1"
 <body>
 
 <!-- ════════════════════════════════════════════════════════════════════
-     CONFIGURAÇÃO (leia 05-KIWIFY-CONFIGURACAO.md antes de publicar):
+     UPSELL do funil Fé & Papel — CONFIGURADO (ver 05-KIWIFY-CONFIGURACAO.md)
 
-     1. Publique esta página: /upsell.html junto com a landing no Vercel
-        → URL final: https://fepapel-acervo-cristao.vercel.app/upsell.html
-     2. Na Kiwify (produto principal → Configurações → "Página de obrigado
-        e upsell"), cole essa URL e use o GERADOR DE UPSELL.
-     3. Troque o id do botão aceitar abaixo pelo ID que o gerador criar
-        (mantém o prefixo kiwify-upsell-trigger-) e cole o script gerado
-        no slot indicado no fim da página. O botão "não obrigado" já está
-        com o id correto (kiwify-upsell-cancel-trigger).
+     ✅ Código do gerador da Kiwify integrado (oferta R$ 47, wrapper
+        kiwify-upsell-riA8apY) + script upsell.min.js no fim da página.
+     ✅ A recusa (cancel nativo) leva ao downsell via data-downsell-url.
+     ⚠️ PENDENTE: publicar a pasta `landing` no Vercel (projeto
+        acervo-fe-papel-2027) e conferir a URL configurada no painel.
      ════════════════════════════════════════════════════════════════════ -->
 
 <div class="approved">✔ <b>Compra aprovada!</b> Seu Acervo Fé &amp; Papel 2027 está indo pro seu e-mail — mas leia isto antes de sair…</div>
@@ -158,9 +155,12 @@ src="https://www.facebook.com/tr?id=1625181948755238&ev=PageView&noscript=1"
         <li>Grupo VIP + desconto de membro — <b>R$ 30</b></li>
       </ul>
 
-      <!-- ══ BOTÃO ACEITAR — troque o sufixo do id pelo ID do seu gerador de upsell na Kiwify ══ -->
-      <button id="kiwify-upsell-trigger-COLE-O-ID-DO-GERADOR" onclick="return false">SIM! QUERO O MÓDULO POR R$ 47<small>adicionar ao meu pedido agora · compra em 1 clique</small></button>
-      <!-- ══ FIM DO BOTÃO ACEITAR ══ -->
+      <!-- ══ Código do GERADOR DE UPSELL da Kiwify (oferta R$ 47) — wrapper
+            nativo com data-downsell-url; botão estilizado pelo CSS da página ══ -->
+      <div id="kiwify-upsell-riA8apY" data-upsell-url="" data-downsell-url="https://acervo-fe-papel-2027.vercel.app/downsell.html" style="--kiwify-upsell-accept-bg:#a85b42;--kiwify-upsell-accept-color:#FFFFFF">
+        <button id="kiwify-upsell-trigger-riA8apY">SIM! QUERO O MÓDULO POR R$ 47<small>adicionar ao meu pedido agora · compra em 1 clique</small></button>
+      </div>
+      <!-- ══ FIM DO CÓDIGO GERADO ══ -->
 
       <p class="pgtos">Cobrança facilitada nos dados já informados · garantia de 7 dias também vale aqui</p>
     </div>
@@ -189,9 +189,10 @@ src="https://www.facebook.com/tr?id=1625181948755238&ev=PageView&noscript=1"
     </div>
     <div style="max-width:560px;margin:26px auto 0;text-align:center">
 
-      <!-- ══ BOTÃO RECUSAR — id fixo exigido pela Kiwify, não trocar ══ -->
-      <button id="kiwify-upsell-cancel-trigger" onclick="return false">Não, obrigado — quero só o acervo que já comprei</button>
-      <!-- ══ FIM DO BOTÃO RECUSAR ══ -->
+      <!-- ══ RECUSA nativa do gerador — o script da Kiwify leva o comprador
+            pro data-downsell-url do wrapper acima (downsell R$ 19,90) ══ -->
+      <div id="kiwify-upsell-cancel-trigger-riA8apY">Não, obrigado — quero só o acervo que já comprei</div>
+      <!-- ══ FIM DA RECUSA ══ -->
 
     </div>
   </div>
@@ -213,11 +214,10 @@ src="https://www.facebook.com/tr?id=1625181948755238&ev=PageView&noscript=1"
 })();
 </script>
 
-<!-- ════════════════════════════════════════════════════════════════════
-     COLE AQUI O SCRIPT DO GERADOR DE UPSELL DA KIWIFY
-     (Produto → Configurações → "Página de obrigado e upsell" → gerador
-      de upsell → Copiar código HTML → cole o <script> aqui embaixo)
-     ════════════════════════════════════════════════════════════════════ -->
+<!-- Script do 1-clique da Kiwify (fica no fim da página, com os botões já
+     presentes no DOM). JÁ INCLUSO — se o código gerado trouxer outro
+     <script src="...upsell.min.js">, não cole de novo -->
+<script src="https://snippets.kiwify.com/upsell-v2/upsell.min.js"></script>
 
 </body>
 </html>

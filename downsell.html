@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Antes de fechar — Módulo Papelaria Lucrativa por R$ 19,90</title>
+<meta name="description" content="Condição especial desta tela: Módulo Papelaria Lucrativa + Grupo VIP por R$ 19,90. Mesmo conteúdo, pagamento único, garantia de 7 dias.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Lora:ital,wght@0,500;1,500&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1B2A4A;--navy2:#142038;--gold:#C9A227;--gold2:#E3C25B;--terra:#C4755A;--terra2:#A85B42;--cream:#FAF6EE;--sand:#F1E9DA;--ink:#3A3226;--soft:#6E6353;--green:#2F6B50}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--ink);line-height:1.65}
+img{max-width:100%;display:block}
+.wrap{max-width:860px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.15}
+.lora{font-family:'Lora',serif;font-style:italic}
+.approved{background:#1F4D33;color:#D9EFE0;text-align:center;font-size:14px;padding:12px 16px;letter-spacing:.02em}
+.approved b{color:#8FE0A8}
+/* CTA */
+.cta{display:block;width:100%;background:linear-gradient(180deg,#D98B6D,var(--terra2));color:#fff;text-align:center;font-weight:800;font-size:19px;letter-spacing:.02em;padding:20px 26px;border-radius:14px;text-decoration:none;box-shadow:0 8px 22px rgba(168,91,66,.4);cursor:pointer;border:none;transition:.2s;font-family:'Montserrat',sans-serif}
+.cta:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(168,91,66,.5)}
+.cta small{display:block;font-weight:500;font-size:12.5px;letter-spacing:.06em;margin-top:6px;opacity:.95}
+/* botões gerados pela Kiwify herdam o tema */
+button[id^="kiwify-upsell-trigger"],a[id^="kiwify-upsell-trigger"]{display:block;width:100%;background:linear-gradient(180deg,#D98B6D,var(--terra2))!important;color:#fff!important;text-align:center;font-weight:800;font-size:19px!important;letter-spacing:.02em;padding:20px 26px!important;border-radius:14px!important;text-decoration:none;box-shadow:0 8px 22px rgba(168,91,66,.4);cursor:pointer;border:none;transition:.2s;font-family:'Montserrat',sans-serif}
+button[id^="kiwify-upsell-trigger"]:hover,a[id^="kiwify-upsell-trigger"]:hover{transform:translateY(-2px)}
+.decline{display:block;width:100%;background:none;color:#8b8371;text-align:center;font-weight:600;font-size:14px;padding:16px 10px;border:none;text-decoration:underline;cursor:pointer;font-family:'Montserrat',sans-serif}
+/* hero */
+.hero{background:radial-gradient(1200px 600px at 80% -10%,#33456B 0%,var(--navy) 55%,var(--navy2) 100%);color:#F3EDDE;padding:54px 0 58px;text-align:center}
+.kicker{display:inline-block;background:var(--gold);color:var(--navy2);font-size:12px;font-weight:800;letter-spacing:.2em;padding:7px 18px;border-radius:30px;text-transform:uppercase}
+.hero h1{font-size:clamp(27px,4.4vw,42px);margin:20px auto 16px;color:#fff;font-weight:800;max-width:740px}
+.hero h1 em{font-style:normal;color:var(--gold2)}
+.hero .sub{font-size:clamp(15.5px,2vw,18px);color:#D8CFB9;max-width:640px;margin:0 auto}
+.hero .sub b{color:#fff}
+.timer{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(201,162,39,.5);color:var(--gold2);font-size:15px;padding:10px 18px;border-radius:12px;margin-top:22px;font-weight:700}
+.timer b{font-variant-numeric:tabular-nums;font-size:18px}
+/* seções */
+section{padding:52px 0}
+.sec-head{text-align:center;max-width:740px;margin:0 auto 30px}
+.sec-head .et{font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--terra2)}
+.sec-head h2{font-size:clamp(23px,3.4vw,32px);color:var(--navy);margin-top:8px;font-weight:800}
+.sec-head p{color:var(--soft);margin-top:10px;font-size:16px}
+/* comparativo */
+.comp{background:#fff}
+.comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:720px;margin:0 auto}
+.comp-card{border-radius:16px;padding:26px 22px;text-align:center}
+.comp-a{background:var(--sand);border:1.5px solid #E4D9C2}
+.comp-b{background:#fff;border:2px solid var(--gold);box-shadow:0 14px 34px rgba(58,50,38,.12);position:relative}
+.comp-card .tag{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+.comp-b .tag{color:var(--terra2)}
+.comp-card .val{font-family:'Playfair Display',serif;font-size:42px;font-weight:800;color:var(--navy);line-height:1.1;margin:10px 0 4px}
+.comp-card .desc{font-size:13.5px;color:var(--soft)}
+.comp-b .desc b{color:var(--ink)}
+.selo-ok{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;font-size:11px;font-weight:800;letter-spacing:.1em;padding:5px 14px;border-radius:20px;text-transform:uppercase;white-space:nowrap}
+/* módulos compactos */
+.mods{background:var(--sand)}
+.mods ul{list-style:none;max-width:640px;margin:0 auto}
+.mods li{background:#fff;border-radius:14px;padding:16px 18px 16px 54px;margin-bottom:12px;position:relative;font-size:14.5px;color:var(--soft)}
+.mods li:before{content:"✔";position:absolute;left:20px;top:16px;color:var(--green);font-weight:800}
+.mods li b{color:var(--ink)}
+/* oferta */
+.oferta{background:linear-gradient(180deg,var(--cream) 0%,var(--sand) 100%)}
+.caixa{max-width:540px;margin:0 auto;background:#fff;color:var(--ink);border-radius:22px;padding:36px 30px;box-shadow:0 24px 60px rgba(58,50,38,.18);border-top:6px solid var(--gold);text-align:center}
+.sel{display:inline-block;background:var(--terra);color:#fff;font-size:12px;font-weight:800;letter-spacing:.18em;padding:7px 16px;border-radius:30px;text-transform:uppercase;margin-bottom:16px}
+.anc{text-decoration:line-through;color:#a0937f;font-size:17px}
+.anc2{text-decoration:line-through;color:#a0937f;font-size:19px;margin-right:8px}
+.hoje{font-size:14px;letter-spacing:.14em;color:var(--green);font-weight:800;text-transform:uppercase;margin:8px 0 2px}
+.preco{font-family:'Playfair Display',serif;font-size:64px;font-weight:800;color:var(--navy);line-height:1}
+.preco sup{font-size:24px}
+.pgtos{text-align:center;font-size:12.5px;color:#a0937f;margin-top:14px}
+/* garantia */
+.garantia{display:flex;gap:22px;align-items:center;max-width:620px;margin:0 auto;background:#fff;border-radius:18px;padding:24px;box-shadow:0 8px 24px rgba(58,50,38,.09);border-left:6px solid var(--green)}
+.selo{width:84px;height:84px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#4ba37a,#2d6b52);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;font-weight:800}
+.selo b{font-size:25px}.selo span{font-size:10px;letter-spacing:.1em}
+/* mensagem final */
+#final-msg{display:none;text-align:center;background:#fff;border-radius:16px;padding:28px 22px;max-width:560px;margin:0 auto;box-shadow:0 8px 24px rgba(58,50,38,.09)}
+#final-msg h3{color:var(--navy);margin-bottom:8px}
+#final-msg p{font-size:14.5px;color:var(--soft)}
+footer{background:#0E1626;color:#8b8371;text-align:center;font-size:12px;padding:26px 20px;line-height:1.9}
+@media(max-width:700px){.comp-grid{grid-template-columns:1fr}.preco{font-size:54px}}
+</style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1625181948755238');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1625181948755238&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════════════════
+     DOWNSELL do funil Fé & Papel — CONFIGURADO (ver 05-KIWIFY-CONFIGURACAO.md)
+
+     ✅ Código do gerador da Kiwify integrado (oferta R$ 19,90, wrapper
+        kiwify-upsell-zLKzLDC) + script upsell.min.js no fim da página.
+     ✅ Quem chega aqui recusou o upsell — a cobrança em 1-clique usa o
+        mesmo mecanismo/token do upsell.
+     ⚠️ PENDENTE: publicar a pasta `landing` no Vercel (projeto
+        acervo-fe-papel-2027) — esta página ainda está 404 no ar.
+     ════════════════════════════════════════════════════════════════════ -->
+
+<div class="approved">✔ <b>Compra aprovada!</b> Seu Acervo Fé &amp; Papel 2027 já está no seu e-mail — esta é a última tela antes de você ir conferir 😉</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">Última chance · só nesta tela</span>
+    <h1>Tudo bem não levar por R$ 47. O módulo inteiro por <em>R$ 19,90</em> — leva?</h1>
+    <p class="sub">Condição especial de lançamento, válida <b>apenas nesta tela</b>: o mesmo Módulo Papelaria Lucrativa + Grupo VIP, <b>pagamento único de R$ 19,90</b>. Depois dela, o preço volta a R$ 47.</p>
+    <div class="timer">⏳ Some desta tela em <b id="clock">10:00</b></div>
+  </div>
+</header>
+
+<section class="comp">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="et">a conta que fecha</div>
+      <h2>Os dois produtos pelo preço de um</h2>
+    </div>
+    <div class="comp-grid">
+      <div class="comp-card comp-a">
+        <div class="tag">Na tela anterior</div>
+        <div class="val">R$ 47</div>
+        <div class="desc">só o Módulo Papelaria Lucrativa</div>
+      </div>
+      <div class="comp-card comp-b">
+        <span class="selo-ok">você escolhe agora</span>
+        <div class="tag">Com esta condição</div>
+        <div class="val">R$ 49,80</div>
+        <div class="desc"><b>Acervo 2027 (R$ 29,90, já pago) + Módulo (R$ 19,90)</b> — os dois produtos por praticamente o que custaria só o módulo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mods">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="et">o que entra agora (tudo)</div>
+      <h2>Módulo completo, sem cortar nada</h2>
+    </div>
+    <ul>
+      <li><b>Guia Papelaria Lucrativa (~30 págs.)</b> — precificação com margem real, onde vender (incluindo lojas de igreja), fotografia com celular e embalagem que valoriza</li>
+      <li><b>Calendário do Produtor 2027</b> — mês a mês o que produzir e quando, do Natal à volta às aulas</li>
+      <li><b>20 scripts prontos de venda</b> — WhatsApp e Instagram: copiar, colar, vender</li>
+      <li><b>Grupo VIP</b> — próximos acervos (Páscoa, Dia das Mães) com desconto de membro</li>
+    </ul>
+  </div>
+</section>
+
+<section class="oferta">
+  <div class="wrap">
+    <div class="caixa">
+      <span class="sel">Condição desta tela</span>
+      <p style="font-size:15px;color:var(--soft)">Módulo Papelaria Lucrativa + Grupo VIP</p>
+      <p style="margin-top:12px"><span class="anc2">R$ 47</span><span class="anc">R$ 111</span></p>
+      <p class="hoje">somente agora, pagamento único</p>
+      <div class="preco"><sup>R$</sup>19<sup>,90</sup></div>
+
+      <!-- ══ Código do GERADOR DE UPSELL da Kiwify (oferta R$ 19,90) —
+            wrapper nativo; botão estilizado pelo CSS da página ══ -->
+      <div id="kiwify-upsell-zLKzLDC" data-upsell-url="" data-downsell-url="" style="--kiwify-upsell-accept-bg:#a85b42;--kiwify-upsell-accept-color:#FFFFFF">
+        <button id="kiwify-upsell-trigger-zLKzLDC">LEVO O MÓDULO POR R$ 19,90<small>adicionar ao meu pedido agora · compra em 1 clique</small></button>
+      </div>
+      <!-- ══ FIM DO CÓDIGO GERADO ══ -->
+
+      <p class="pgtos">Cartão: cobrança em 1 clique nos dados já informados · Pix: QR gerado na hora · garantia de 7 dias</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="garantia">
+      <div class="selo"><b>7</b><span>DIAS</span></div>
+      <div>
+        <h3 style="color:var(--navy)">A mesma garantia da sua compra</h3>
+        <p style="font-size:14.5px;color:var(--soft);margin-top:6px">Leia o guia, use os scripts, entre no grupo. Se não valer os R$ 19,90, devolvemos 100% em até 7 dias — sem pergunta, sem burocracia.</p>
+      </div>
+    </div>
+    <div style="max-width:540px;margin:22px auto 0;text-align:center">
+      <button class="decline" id="recusa-final" onclick="document.getElementById('final-msg').style.display='block';this.style.display='none'">Não, obrigado — estou bom com o acervo</button>
+    </div>
+    <div id="final-msg" style="margin-top:18px">
+      <h3>Tudo certo! 🙏</h3>
+      <p>Seu acesso ao <b>Acervo Fé &amp; Papel 2027</b> já foi enviado pro seu e-mail (procure "Kiwify", inclusive no spam). Se não chegar em 10 minutos, fale com o suporte: <b>torresthomaz648@gmail.com</b>.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <b style="color:#E8DFCF">Fé &amp; Papel</b> · Acervo Cristão 2027<br>
+  Produto digital · resultados dependem da dedicação e do mercado local · proibida a revenda dos arquivos digitais.<br>
+  © 2026 Fé &amp; Papel — impresso com fé, pra ser vendido com margem.
+</footer>
+
+<script>
+(function(){
+  // timer da tela
+  var restante = 10*60; // 10 minutos
+  var el = document.getElementById('clock');
+  function t(){var m=Math.floor(restante/60),s=restante%60;el.textContent=m+':'+(s<10?'0':'')+s}
+  t();
+  setInterval(function(){ if(restante>0){restante--;t();} },1000);
+
+  // se esta página for aberta com token na query (vinda do upsell),
+  // o script da Kiwify gerado abaixo cuida do 1-clique automaticamente.
+})();
+</script>
+
+<!-- Script do 1-clique da Kiwify — obrigatório, JÁ INCLUSO (não cole outro) -->
+<script src="https://snippets.kiwify.com/upsell-v2/upsell.min.js"></script>
+
+</body>
+</html>
